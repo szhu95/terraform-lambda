@@ -7,14 +7,14 @@ on:
     branches: [master]
 
 jobs:
-  deploy:
-  runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
   
-  steps:
-    - name: invoke-aws-lambda
-      uses: gagoar/invoke-aws-lambda@v3.3.2
-      with:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        FunctionName: Get-Date-Function
-        Payload: '{}'
+    steps:
+      - name: invoke-aws-lambda
+        uses: gagoar/invoke-aws-lambda@v3.3.2
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          FunctionName: Get-Date-Function
+          Payload: '{}'
