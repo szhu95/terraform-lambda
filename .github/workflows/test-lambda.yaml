@@ -2,8 +2,6 @@ name: Test Lambda Get-Date-Function
 
 on:
   push:
-    paths:
-      - "src/**"
     branches: [master]
 
 jobs:
