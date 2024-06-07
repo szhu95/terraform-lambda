@@ -1,4 +1,4 @@
-name: Test Lambda FunctionName
+name: Test Lambda Get-Date-Function
 
 on:
   push:
